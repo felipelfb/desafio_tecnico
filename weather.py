@@ -125,14 +125,14 @@ def weather():
                             rain_prob = current_rain_prob
                             rain_amount = current_data.rain_prec
                             rain_date = current_data.date
-            json_dict = {
-                'min_temp_date': min_temp_date.strftime('%Y-%m-%d'),
-                'min_temp': min_temp,
-                'max_temp_date': max_temp_date.strftime('%Y-%m-%d'),
-                'max_temp': max_temp,
-                'most_probable_rain_date': rain_date.strftime('%Y-%m-%d'),
-                'rain_amount': rain_amount
-            }
+        json_dict = {
+            'min_temp_date': min_temp_date.strftime('%Y-%m-%d'),
+            'min_temp': min_temp,
+            'max_temp_date': max_temp_date.strftime('%Y-%m-%d'),
+            'max_temp': max_temp,
+            'most_probable_rain_date': rain_date.strftime('%Y-%m-%d'),
+            'rain_amount': rain_amount
+        }
         return json.dumps(json_dict)
     else:
         return 'Error'
